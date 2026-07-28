@@ -1,0 +1,10 @@
+node_modules
+npm-debug.log
+.env
+.env.local
+.git
+client/node_modules
+server/node_modules
+client/dist
+*.md
+!README.md
