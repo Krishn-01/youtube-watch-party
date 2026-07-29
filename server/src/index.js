@@ -35,6 +35,11 @@ app.get('/api/health', (_req, res) => {
   });
 });
 
+app.post('/api/test', (req, res) => {
+  console.log('TEST ROUTE HIT');
+  res.json({ success: true });
+});
+
 app.use('/api/rooms', roomRoutes);
 
 if (process.env.NODE_ENV === 'production') {
