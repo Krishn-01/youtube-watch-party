@@ -3,7 +3,9 @@ import { io } from 'socket.io-client';
 
 const SocketContext = createContext(null);
 
-const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || '';
+const SOCKET_URL =
+  import.meta.env.VITE_SOCKET_URL ||
+  import.meta.env.VITE_API_URL;
 
 export const SocketProvider = ({ children }) => {
   const [socket, setSocket] = useState(null);
