@@ -35,9 +35,12 @@ app.get('/api/health', (_req, res) => {
   });
 });
 
-app.post('/api/test', (req, res) => {
-  console.log('TEST ROUTE HIT');
-  res.json({ success: true });
+app.get('/api/test', (req, res) => {
+  res.json({
+    success: true,
+    version: "168906c",
+    message: "Running latest backend"
+  });
 });
 
 app.use('/api/rooms', roomRoutes);
